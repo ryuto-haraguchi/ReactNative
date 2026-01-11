@@ -5,16 +5,14 @@ export default StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    borderBottomColor: "#cccccc",
-    borderBottomWidth: 1,
-    paddingBottom: 16,
     paddingHorizontal: 16,
-    marginBottom: 16,
     flex: 1,
+    backgroundColor: "#1e085aff",
   },
   textInput: {
     borderWidth: 1,
     borderColor: "#777676ff",
+    color: "#fff",
     width: "100%",
     padding: 8,
   },
@@ -27,5 +25,10 @@ export default StyleSheet.create({
   buttonStyle: {
     flex: 0.3,
     marginHorizontal: 6,
+  },
+  img: {
+    width: 100,
+    height: 100,
+    margin: 20,
   },
 });
