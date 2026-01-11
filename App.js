@@ -16,6 +16,10 @@ export default function App() {
     // setInputState("");
   };
 
+  const deleteGoalHandler = (goalKey) => {
+    setGoalsState((prev) => prev.filter((v) => v.key !== goalKey));
+  };
+
   return (
     <View style={styles.appContainer}>
       <GoalInput
@@ -23,7 +27,7 @@ export default function App() {
         onChangeText={setInputState}
         onAddGoal={addGoalHandler}
       />
-      <GoalsList goals={goalsState} />
+      <GoalsList goals={goalsState} deleteGoalHandler={deleteGoalHandler} />
     </View>
   );
 }
