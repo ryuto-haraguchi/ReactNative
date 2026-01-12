@@ -24,10 +24,10 @@ export default function GoalInput({
         />
         <View style={styles.buttonRow}>
           <View style={styles.buttonStyle}>
-            <Button title="Add Goal" onPress={onAddGoal} />
+            <Button title="Add Goal" onPress={onAddGoal} color="#5e0acc" />
           </View>
           <View style={styles.buttonStyle}>
-            <Button title="Cancel" onPress={onCancel} />
+            <Button title="Cancel" onPress={onCancel} color="#5e0acc" />
           </View>
         </View>
       </View>

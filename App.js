@@ -3,6 +3,7 @@ import { useState } from "react";
 import GoalInput from "./components/GoalInput";
 import GoalsList from "./components/GoalsList";
 import styles from "./styles/appStyles";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   const [inputState, setInputState] = useState("");
@@ -31,16 +32,19 @@ export default function App() {
   };
 
   return (
-    <View style={styles.appContainer}>
-      <GoalInput
-        inputValue={inputState}
-        onChangeText={setInputState}
-        onAddGoal={addGoalHandler}
-        onCancel={hideModalHandler}
-        visible={isModalVisible}
-      />
-      <GoalsList goals={goalsState} deleteGoalHandler={deleteGoalHandler} />
-      <Button title="Add Goal" color="#5e0acc" onPress={showModalHandler} />
-    </View>
+    <>
+      <StatusBar style="light" />
+      <View style={styles.appContainer}>
+        <GoalInput
+          inputValue={inputState}
+          onChangeText={setInputState}
+          onAddGoal={addGoalHandler}
+          onCancel={hideModalHandler}
+          visible={isModalVisible}
+        />
+        <GoalsList goals={goalsState} deleteGoalHandler={deleteGoalHandler} />
+        <Button title="Add Goal" color="#5e0acc" onPress={showModalHandler} />
+      </View>
+    </>
   );
 }

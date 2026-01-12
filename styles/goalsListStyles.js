@@ -8,5 +8,6 @@ export default StyleSheet.create({
   goalsTitle: {
     fontSize: 24,
     marginBottom: 16,
+    color: "white",
   },
 });
